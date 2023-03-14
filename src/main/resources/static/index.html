@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinobilletter</title>
+    <style>
+
+        label {
+            display: inline-table;
+            width: 150px;
+            text-align: left;
+            margin-bottom: 8px;
+
+
+        }
+    </style>
+    <script type="text/javascript" src="Kino.js"></script>
+</head>
+
+
+<body>
+
+<h1>Bestilling av kinobilletter</h1>
+<table>
+
+
+    <tr>
+        <lable for="film">Velg film:  </lable>
+        <select id="film" name="film" style="width: 200px">
+            <option value =""selected disabled hidden> Velg film her</option>
+            <option value="Frozen"> Frozen</option>
+            <option value="Tarzan"> Tarzan</option>
+            <option value="Thelionking">The lion king</option>
+            <option value="Mulan">Mulan</option>
+            <option value="Robinhood">Robin Hood</option>
+        </select>
+
+    </tr>
+    <br><br>
+    <tr>
+        <label for="antall">Antall </label>
+        <input type="text" id="antall" name="Antall" style="width: 16px">
+        <span style="margin-left: 8px" id = "antallFeil"> </span>
+    </tr>
+    <br><br>
+    <tr>
+        <label for="fornavn">Fornavn</label>
+        <input type="text" id="fornavn" name="fornavn">
+        <span style="margin-left: 5px" id =  "feilFornavn"></span>
+
+
+
+    </tr>
+    <br>
+    <tr>
+        <label for="etternavn">Etternavn</label>
+        <input type="text" id="etternavn" name="etternavn">
+        <span style="margin-left: 5px" id = "feilEtternavn"></span>
+    </tr>
+    <br>
+    <tr>
+        <label for="telefonnr">Telefonnummer</label>
+        <input type="number" id="telefonnr" name="Telefonnr">
+        <span style="margin-left: 5px" id = "feilTelefonnr"></span>
+    </tr>
+    <br>
+    <tr>
+        <label for="epost">E-post</label>
+        <input type="text" id="Epost" name ="E-post">
+        <span style="margin-left: 5px" id = "feilEpost"></span>
+    </tr>
+    <br>
+    <tr>
+
+        <button id = kjop onclick="kjopBilletter(film, antall, fornavn, etternavn, telefonnr, Epost)"   type="submit">Kjøp billett</button>
+
+    </tr>
+    <br><br>
+    <h2>Alle billetter</h2>
+    <div id="alleBilletter"></div>
+    <br><br>
+    <tr>
+
+        <div id="personRegister"></div>
+    </tr>
+    <button id="reset-button" onclick="slettData()">Slett alle billettene</button>
+</table>
+
+
+</body>
+</html>
